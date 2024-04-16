@@ -1,7 +1,6 @@
-/* if you are using any Google fonts change the font names below to your fonts. 
-Any spaces in your font name should be replaced with a +. 
-Fonts are separated by a | */
-@import url('https://fonts.googleapis.com/css2?family=Libre+Bodoni:wght@700&family=Roboto&display=swap');
+@import url("gambetta.css");
+@import url('supreme.css');
+@import url("montserrat.css");
 
 :root {
   --primary-color: #03031d;
@@ -9,8 +8,9 @@ Fonts are separated by a | */
   --accent1-color: #40cc00;
   --accent2-color: #F0D100;
 
-  --heading-font: "Libre Bodoni", serif, arial;
-  --paragraph-font: Roboto, sans-serif, helvetica;
+  --heading-font-a: Gambetta-Semibold, serif;
+  --heading-font-b: Supreme-Bold, arial;
+  --paragraph-font: Montserrat-Regular, sans-serif, helvetica;
 
   --headline-color-on-white: #151515;
   --headline-color-on-color: #e5e5e5; 
@@ -40,7 +40,7 @@ img {
   background-color: #151515;
 }
 h1, h2, h3, h4, h5, h6 {
-  font-family: var(--heading-font);
+  font-family: var(--heading-font-a);
   color: var(--headline-color-on-white);
 }
 h2 {

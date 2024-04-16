@@ -1,4 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Libre+Bodoni:wght@700&family=Roboto&display=swap');
+@import url("gambetta.css");
+@import url('supreme.css');
+@import url("montserrat.css");
 
 body {
     background-color: #151515;
