@@ -2,25 +2,54 @@
 @import url('supreme.css');
 @import url("montserrat.css");
 
+:root {
+    /*objects*/
+    --background-color: white;
+    --primary-color: grey;
+    --accent1-color: lightgrey;
+    --accent2-color: darkgrey;
+    /*fonts*/
+    --heading-font: Supreme-Bold, serif;
+    --heading-normal-color: Black;
+    --heading-contrast-color: Black;
+    --paragraph-font: Montserrat-Regular, sans-serif;
+    --paragraph-normal-color: Black;
+    --paragraph-contrast-color: Black;
+}
+
+/*
+---------------------------------------------------
+
+!!!!!!!!! DO NOT ALTER ANYTHING BELOW THIS !!!!!!!!
+
+---------------------------------------------------
+
+---------------------------------------------------
+
+/////////////////// Page Frame ////////////////////
+
+---------------------------------------------------
+*/
+
 body {
-    background-color: #151515;
+    background-color: var(--background-color);
     max-width: 1600px;
     margin: 0 auto;
     padding: 0;
 }
 
 body h1 {
-    font-family: "Libre Bodoni", Helvetica, sans-serif;
+    font-family: var(--heading-font);
     font-size: 5em;
     text-align: center;
-    color: #E5E5E5;
+    color: var(--heading-normal-color);
 }
 
 body a, body p {
-    font-family: Roboto, Arial, sans-serif;
+    font-family: var(--paragraph-font);
     text-decoration: none;
     text-align: center;
-    color: #E5E5E5;
+    color: var(--paragraph-contrast-color);
 }
 
 header, footer, main {
@@ -30,21 +59,20 @@ header, footer, main {
 header, footer {
     width: 100%;
     height: 75px;
-    background-color: #960508;
+    background-color: var(--primary-color);
     display: flex;
     align-items: center;
 }
 
 footer img, header img {
-    width: 50px;
-    height: auto;
-    transition: transform .5s;
+    margin-top: 5px;
+    /*transition: transform .5s;*/
 }
-
+/*
 footer img:hover, header img:hover {
     transform: scale(1.25);
 }
-
+*/
 header{
     position: fixed;
     z-index: 100;
@@ -64,16 +92,20 @@ nav a {
 }
 
 nav a:hover {
-    background-color: #E5E5E5;
-    color: #151515;
+    background-color: var(--accent1-color);
+    color: var(--paragraph-contrast-color);
 }
 
-#logo_link {
-    margin-top: 5px;
+.logo-link {
     margin-left: 25px;
 }
 
-#logo_link, #upper-nav {
+#upper-contact {
+    margin-left: auto;
+    padding-right: 25px;
+}
+
+.logo-link, #upper-nav, #upper-contact {
     z-index: 101;
 }
 
@@ -81,44 +113,48 @@ footer {
     justify-content: space-between;
 }
 
-
 #site-plan {
     align-self: center;
     justify-self: center;
+    font-weight: bold;
+    font-style: italic;
 }
 
-#footer-links {
-    margin-top: 5px;
+.footer-links {
     display: flex;
     gap: 25px;
-    padding-left: 25px;
+    padding-right: 25px;
 }
 
 #footer-credits {
     font-size: 0.75em;
     line-height: 1.45;
-    padding-right: 25px;
+}
+
+#footer-credits a {
+    font-weight: bold;
+    font-style: italic;
 }
 
 #footer-credits a:hover, #site-plan:hover {
-    color: #151515;
+    color: var(--paragraph-contrast-color);
 }
 
-#hero-grid {
+#main-grid {
     display: grid;
     grid-template-columns: repeat(15, 1fr);
     grid-template-rows: 75px repeat(8, 1fr) ;
 }
 
-#hero-grid img {
+#main-grid img {
     width: 100%;
     height: 100%;
     grid-column: 1/16;
     grid-row: 2/9;
 }
 
-#hero-grid h1 {
-    color: #151515;
+#main-grid h1 {
+    color: var(--paragraph-normal-color);
     grid-column: 8/15;
     grid-row: 2/5;
     z-index: 1;
@@ -133,17 +169,17 @@ footer {
 }
 
 /*
-----------------------------------------------------------------------------
+---------------------------------------------------
 
-DO NOT ALTER ANYTHING ABOVE THIS !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!! DO NOT ALTER ANYTHING BELOW THIS !!!!!!!!
 
-----------------------------------------------------------------------------
+---------------------------------------------------
 
-----------------------------------------------------------------------------
+---------------------------------------------------
 
-///////////////////////////////// Home Page ////////////////////////////////
+//////////////////// Home Page ////////////////////
 
-----------------------------------------------------------------------------
+---------------------------------------------------
 */
 
 #home-quote {
