@@ -1,0 +1,546 @@
+@import url("gambetta.css");
+@import url('supreme.css');
+@import url("montserrat.css");
+
+:root {
+    /*objects*/
+    --background-color: white;
+    --primary-color: grey;
+    --accent1-color: lightgrey;
+    --accent2-color: darkgrey;
+    /*fonts*/
+    --heading-font: Supreme-Bold, serif;
+    --heading-normal-color: Black;
+    --heading-contrast-color: Black;
+    --paragraph-font: Montserrat-Regular, sans-serif;
+    --paragraph-normal-color: Black;
+    --paragraph-contrast-color: Black;
+}
+
+/*
+---------------------------------------------------
+
+!!!!!!!!! DO NOT ALTER ANYTHING BELOW THIS !!!!!!!!
+
+---------------------------------------------------
+
+---------------------------------------------------
+
+/////////////////// Page Frame ////////////////////
+
+---------------------------------------------------
+*/
+
+body {
+    background-color: var(--background-color);
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 0;
+}
+
+body h1 {
+    font-family: var(--heading-font);
+    font-size: 5em;
+    text-align: center;
+    color: var(--heading-normal-color);
+}
+
+body a, body p {
+    font-family: var(--paragraph-font);
+    text-decoration: none;
+    text-align: center;
+    color: var(--paragraph-contrast-color);
+}
+
+header, footer, main {
+    max-width: inherit;
+}
+
+header, footer {
+    width: 100%;
+    height: 75px;
+    background-color: var(--primary-color);
+    display: flex;
+    align-items: center;
+}
+
+footer img, header img {
+    margin-top: 5px;
+    /*transition: transform .5s;*/
+}
+/*
+footer img:hover, header img:hover {
+    transform: scale(1.25);
+}
+*/
+header{
+    position: fixed;
+    z-index: 100;
+    justify-content: left;
+    gap: 10px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    gap: 25px;
+    margin-left: 10px;
+}
+
+nav a {
+    padding: 28px;
+}
+
+nav a:hover {
+    background-color: var(--accent1-color);
+    color: var(--paragraph-contrast-color);
+}
+
+.logo-link {
+    margin-left: 25px;
+}
+
+#upper-contact {
+    margin-left: auto;
+    padding-right: 25px;
+}
+
+.logo-link, #upper-nav, #upper-contact {
+    z-index: 101;
+}
+
+footer {
+    justify-content: space-between;
+}
+
+#site-plan {
+    align-self: center;
+    justify-self: center;
+    font-weight: bold;
+    font-style: italic;
+}
+
+.footer-links {
+    display: flex;
+    gap: 25px;
+    padding-right: 25px;
+}
+
+#footer-credits {
+    font-size: 0.75em;
+    line-height: 1.45;
+}
+
+#footer-credits a {
+    font-weight: bold;
+    font-style: italic;
+}
+
+#footer-credits a:hover, #site-plan:hover {
+    color: var(--paragraph-contrast-color);
+}
+
+#main-grid {
+    display: grid;
+    grid-template-columns: repeat(15, 1fr);
+    grid-template-rows: 75px repeat(8, 1fr) ;
+}
+
+#main-grid img {
+    width: 100%;
+    height: 100%;
+    grid-column: 1/16;
+    grid-row: 2/9;
+}
+
+#main-grid h1 {
+    color: var(--paragraph-normal-color);
+    grid-column: 8/15;
+    grid-row: 2/5;
+    z-index: 1;
+    align-self: center;
+    justify-self: center;
+}
+
+#info-blocks {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, 1fr);
+}
+
+/*
+---------------------------------------------------
+
+!!!!!!!!! DO NOT ALTER ANYTHING BELOW THIS !!!!!!!!
+
+---------------------------------------------------
+
+---------------------------------------------------
+
+//////////////////// Home Page ////////////////////
+
+---------------------------------------------------
+*/
+
+#home-quote {
+    padding: 50px;
+}
+
+#home-quote h1, #home-quote h2 {
+    color: #E5E5E5;
+    font-style: italic;
+    font-weight: bold;
+    text-align: left;
+    font-size: 2.5em;
+}
+
+.home-left-block, .home-right-block {
+    display: grid;
+    grid-template: repeat(7, 1fr)/repeat(15, 1fr);
+}
+
+.home-left-block img, .home-right-block img {
+    width: 200px;
+    height: auto;
+    grid-row: 2/4;
+    border-top: 5px solid #960508;
+    border-bottom: 5px solid #960508;
+}
+
+.home-left-block img {
+    border-left: 5px solid #960508;
+}
+
+.home-right-block img {
+    border-right: 5px solid #960508;
+}
+
+.home-left-block-img, .home-left-block-btn-bkg, .home-left-block-btn-txt {
+    grid-column: 2/4;
+}
+
+.home-right-block-img, .home-right-block-btn-bkg, .home-right-block-btn-txt {
+    grid-column: 13/15;
+}
+
+.home-left-block-bkg, .home-right-block-bkg {
+    z-index: -1;
+}
+
+.home-left-block-bkg, .home-left-block-btn-bkg, .home-right-block-bkg, .home-right-block-btn-bkg {
+    background-color: #960508;
+    height: auto;
+    width: auto;
+}
+
+.home-left-block-bkg, .home-right-block-bkg {
+    grid-row: 2/6;
+}
+
+.home-left-block-bkg {
+    grid-column: 4/15;
+}
+
+.home-right-block-bkg {
+    grid-column: 2/13;
+}
+
+.home-left-block-btn-bkg, .home-right-block-btn-bkg {
+    grid-row: 5/6;
+    margin: 20px;
+    border-radius: 20px;
+}
+
+.home-left-block-txt,.home-left-block-btn-txt, .home-right-block-txt,.home-right-block-btn-txt {
+    align-self: center;
+    justify-self: center;
+}
+
+.home-left-block-txt, .home-right-block-txt {
+    font-size: 2em;
+    grid-row: 2/6;
+}
+
+.home-left-block-txt {
+    grid-column: 5/14;
+
+}
+
+.home-right-block-txt {
+    grid-column: 3/11;
+
+}
+
+.home-left-block-btn-txt, .home-right-block-btn-txt {
+    color: #E5E5E5;
+    font-size: 1.5em;
+    grid-row: 5/6;
+    z-index: 1;
+    transition: transform .5s;
+}
+
+.home-left-block-btn-txt:hover, .home-right-block-btn-txt:hover {
+    transform: scale(1.25);
+}
+
+/*
+----------------------------------------------------------------------------
+
+/////////////////////////////// Showcase Page //////////////////////////////
+
+----------------------------------------------------------------------------
+*/
+
+#showcase-headerline {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 75px 1fr 75px;
+}
+
+#showcase-headerline h1 {
+    grid-row: 2/3;
+}
+
+.showcase-left-block-bkg, .showcase-right-block-bkg {
+    background-color: #960508;
+    height: auto;
+    width: auto;
+    grid-column: 2/15;
+    grid-row: 3/8;
+    border-radius: 25px;
+    z-index: -1;
+}
+
+.showcase-left-block, .showcase-right-block {
+    display: grid;
+    grid-template: repeat(8, 1fr)/repeat(15, 1fr);
+    margin-bottom: 100px;
+}
+
+.showcase-left-block-txt, .showcase-right-block-txt {
+    grid-row: 3/8;
+    text-align: justify;
+    margin-top: 50px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-size: 1em;
+    align-self: center;
+}
+
+.showcase-left-block-txt {
+    grid-column: 2/9;
+    padding-left: 70px;
+}
+
+.showcase-right-block-txt {
+    grid-column: 8/15;
+    padding-right: 70px;
+}
+
+.showcase-left-block-ttl-img, .showcase-right-block-ttl-img {
+    width: 600px;
+    height: auto;
+    grid-row: 2/4;
+    justify-self: center;
+    border-radius: 25px;
+}
+
+.showcase-left-block-ttl-img {
+    grid-column: 2/10;
+}
+
+.showcase-right-block-ttl-img {
+    grid-column: 7/15;
+    margin-top: -30px;
+}
+
+#showcase-left-block-inr-img, #showcase-right-block-inr-img {
+    width: auto;
+    height: 375px;
+    grid-row: 3/8;
+    justify-self: center;
+    align-self: center;
+    border-radius: 25px;
+    transition: .5s;
+}
+
+#showcase-left-block-inr-img:hover, #showcase-right-block-inr-img:hover {
+    transform: scale(1.1);
+}
+
+#showcase-left-block-inr-img {
+    grid-column: 9/15;
+}
+
+#showcase-right-block-inr-img {
+    grid-column: 2/8;
+}
+
+
+/*
+----------------------------------------------------------------------------
+
+/////////////////////////////// About me Page //////////////////////////////
+
+----------------------------------------------------------------------------
+*/
+
+.about-main-block, .about-slave-block {
+    display: grid;
+    grid-template: repeat(7, 1fr) / repeat(15, 1fr);
+}
+
+.about-main-block-bkg, .about-slave-block-bkg {
+    background-color: #960508;
+    width: auto;
+    height: auto;
+    z-index: -1;
+}
+
+.about-main-block-bkg {
+    grid-row: 2/7;
+}
+
+.about-slave-block-bkg {
+    grid-row: 2/6;
+}
+
+.about-main-block-bkg {
+    grid-column: 2/15;
+    border-radius: 25px;
+}
+
+.about-main-block-txt {
+    grid-row: 3/7;
+    grid-column: 2/8;
+    text-align: justify;
+    align-self: center;
+    justify-self: center;
+    font-size: 1em;
+    padding-left: 40px;
+}
+
+#about-main-block-img {
+    width: 78%;
+    grid-column: 8/15;
+    grid-row: 2/7;
+    align-self: center;
+    justify-self: center;
+    transition: 0.5s;
+    border-radius: 25px;
+}
+
+#about-main-block-img:hover {
+    transform: scale(1.1);
+}
+
+.about-main-block-ttl {
+    grid-column: 2/8;
+    grid-row: 2/3;
+    font-size: 1.75em;
+    align-self: center;
+    justify-self: center;
+}
+
+.about-slave-block-bkg {
+    grid-column: 2/12;
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
+}
+.about-slave-block-img {
+    grid-column: 12/15;
+    grid-row: 2/5;
+    width: 90%;
+    border-bottom: 10px solid #960508;
+    border-top: 10px solid #960508;
+    border-right: 10px solid #960508;
+}
+
+.about-slave-block-txt {
+    align-self: center;
+    justify-self: center;
+    text-align: justify;
+    font-size: 1.5em;
+    grid-row: 2/6;
+    grid-column: 2/12;
+    padding: 40px;
+}
+
+/*
+----------------------------------------------------------------------------
+
+DO NOT ALTER ANYTHING BELOW THIS !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+----------------------------------------------------------------------------
+*/
+ 
+/* The Modal (background) */
+.modal {
+display: none; /* Hidden by default */
+position: fixed; /* Stay in place */
+z-index: 1; /* Sit on top */
+padding-top: 150px; /* Location of the box */
+left: 0;
+top: 0;
+width: 100%; /* Full width */
+height: 100%; /* Full height */
+overflow: auto; /* Enable scroll if needed */
+background-color: rgb(0,0,0); /* Fallback color */
+background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+/* Modal Content (Image) */
+.modal-content {
+margin: auto;
+display: block;
+width: 80%;
+max-width: 500px;
+}
+
+/* Caption of Modal Image (Image Text) - Same Width as the Image */
+#caption {
+margin: auto;
+display: block;
+width: 65%;
+max-width: 425px;
+text-align: center;
+color: #ccc;
+padding: 10px 0;
+height: 150px;
+}
+
+/* Add Animation - Zoom in the Modal */
+.modal-content, #caption {
+animation-name: zoom;
+animation-duration: 0.6s;
+}
+
+@keyframes zoom {
+from {transform:scale(0)}
+to {transform:scale(1)}
+}
+
+/* The Close Button */
+.close {
+position: absolute;
+top: 175px;
+right: 35px;
+color: #f1f1f1;
+font-size: 40px;
+font-weight: bold;
+transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+color: #bbb;
+text-decoration: none;
+cursor: pointer;
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px){
+.modal-content {
+    width: 100%;
+}
+}
