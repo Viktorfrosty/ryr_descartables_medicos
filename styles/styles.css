@@ -193,7 +193,7 @@ footer {
     z-index: 1;
     align-self: center;
     justify-self: center;
-    border: 5px, solid, var(--accent2-color);
+    border: 5px solid var(--accent2-color);
     display: flex;
 }
 
