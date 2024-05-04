@@ -8,9 +8,8 @@
   --accent1-color: #40cc00;
   --accent2-color: #F0D100;
 
-  --heading-font-a: Gambetta-Semibold, serif;
-  --heading-font-b: Supreme-Bold, arial;
-  --paragraph-font: Montserrat-Regular, sans-serif, helvetica;
+  --heading-font: Gambetta-Semibold, serif;
+  --paragraph-font: Montserrat-Regular, sans-serif;
 
   --headline-color-on-white: #151515;
   --headline-color-on-color: #e5e5e5; 
@@ -40,7 +39,7 @@ img {
   background-color: #151515;
 }
 h1, h2, h3, h4, h5, h6 {
-  font-family: var(--heading-font-a);
+  font-family: var(--heading-font);
   color: var(--headline-color-on-white);
 }
 h2 {

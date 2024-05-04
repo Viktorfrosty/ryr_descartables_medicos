@@ -188,8 +188,7 @@ footer {
     background-color: var(--primary-color);
     width: 800px;
     height: 300px;
-    grid-column: 3/14;
-    grid-row: 3/8;
+    grid-area: 3/3/14/8;
     z-index: 1;
     align-self: center;
     justify-self: center;
@@ -205,6 +204,34 @@ footer {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: 1fr;
+}
+
+#info-left-block {
+    display: grid;
+    grid-template: repeat(8, 1fr)/repeat(8, 1fr);
+}
+
+#info-left-block-bkg {
+    grid-area: 2/2/8/5;
+    background-color: var(--accent2-color);
+    width: auto;
+    height: auto;
+}
+
+#info-left-block-img {
+    z-index: 1;
+    grid-area: 1/1/4/4;
+    
+}
+
+#info-left-block-ttl {
+    z-index: 2;
+    grid-area: 2/5/7/6;
+}
+
+#info-left-block-txt {
+    z-index: 3;
+    grid-area: 4/5/7/6;
 }
 
 /*erase if not needed*/
