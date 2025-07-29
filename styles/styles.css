@@ -4,17 +4,17 @@
 
 :root {
     /*objects*/
-    --background-color: white;
-    --primary-color: grey;
-    --accent1-color: lightgrey;
-    --accent2-color: darkgrey;
+    --background-color: #E0E0E0;
+    --primary-color: #48C9B0;
+    --accent1-color: #2E86C1;
+    --accent2-color: #FF5E00;
     /*fonts*/
     --heading-font: Supreme-Bold, serif;
-    --heading-normal-color: Black;
-    --heading-contrast-color: Black;
+    --heading-normal-color: #5C5C5B;
+    --heading-contrast-color: #E0E0E0;
     --paragraph-font: Montserrat-Regular, sans-serif;
-    --paragraph-normal-color: Black;
-    --paragraph-contrast-color: Black;
+    --paragraph-normal-color: #5C5C5B;
+    --paragraph-contrast-color: #E0E0E0;
 }
 
 /*
@@ -32,7 +32,7 @@
 */
 
 body {
-    background-color: var(--background-color);
+    background-color: var(--primary-color);
     max-width: 1600px;
     margin: 0 auto;
     padding: 0;
@@ -59,7 +59,7 @@ header, footer, main {
 header, footer {
     width: 100%;
     height: 75px;
-    background-color: var(--primary-color);
+    background-color: var(--background-color);
     display: flex;
     align-items: center;
 }
@@ -78,17 +78,28 @@ header{
     z-index: 100;
     justify-content: left;
     gap: 10px;
+    border-bottom: 2px solid var(--accent2-color);
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+footer {
+    border-top: 2px solid var(--accent2-color);
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
 }
 
 nav {
     display: flex;
     justify-content: space-around;
     gap: 25px;
-    margin-left: 10px;
+    margin-left: auto;
+    /* margin-right: 10px; */
 }
 
 nav a {
     padding: 28px;
+    color: var(--heading-normal-color);
 }
 
 nav a:hover {
@@ -96,8 +107,16 @@ nav a:hover {
     color: var(--paragraph-contrast-color);
 }
 
+nav a:nth-child(3):hover {
+    border-bottom-right-radius: 15px;
+}
+
 .logo-link {
     margin-left: 25px;
+}
+
+.logo-link img {
+    height: 50px;
 }
 
 #upper-contact {
@@ -129,15 +148,21 @@ footer {
 #footer-credits {
     font-size: 0.75em;
     line-height: 1.45;
+    color: var(--heading-normal-color);
 }
 
 #footer-credits a {
     font-weight: bold;
     font-style: italic;
+    color: var(--heading-normal-color);
 }
 
 #footer-credits a:hover, #site-plan:hover {
-    color: var(--paragraph-contrast-color);
+    color: var(--heading-normal-color);
+}
+
+main {
+    min-height: 700px;
 }
 
 #main-grid {
@@ -343,6 +368,10 @@ footer {
 
 ----------------------------------------------------------------------------
 */
+
+#page-grid {
+    padding-top: 100px;
+}
 
 #showcase-headerline {
     display: grid;
